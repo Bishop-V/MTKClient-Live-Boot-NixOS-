@@ -31,7 +31,7 @@
             ({ modulesPath, ... }: {
               nixpkgs.hostPlatform = system;
             })
-            ./files/mtkclient/configuration.nix
+            ./mtkclient/configuration.nix
           
             home-manager.nixosModules.home-manager
             {
@@ -39,7 +39,7 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 backupFileExtension = "mv -f \"$1\" \"$1.$(date +%s).bak\"";
-                users.mtkclient = import ./files/mtkclient/home.nix;
+                users.mtkclient = import ./mtkclient/home.nix;
                 extraSpecialArgs = { inherit inputs pkgs-unstable; };
               };
             }
@@ -58,7 +58,7 @@
             ({ modulesPath, ... }: {
               nixpkgs.hostPlatform = system;
             })
-            ./files/mtkclient/configuration.nix
+            ./mtkclient/configuration.nix
           
             home-manager.nixosModules.home-manager
             {
@@ -66,7 +66,7 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 backupFileExtension = "mv -f \"$1\" \"$1.$(date +%s).bak\"";
-                users.mtkclient = import ./files/mtkclient/home.nix;
+                users.mtkclient = import ./mtkclient/home.nix;
                 extraSpecialArgs = { inherit inputs pkgs-unstable; };
               };
             }
